@@ -199,3 +199,13 @@ El sistema implementa un esquema de validación robusto que opera en dos capas:
 En este proyecto, he optado por un enfoque arquitectónico que prescinde de controladores como capa separada, integrando su funcionalidad directamente en los handlers de las rutas. Esta decisión se alinea con las convenciones de Hapi.js, donde los handlers actúan como controladores únicos, consolidando en un mismo lugar toda la lógica del endpoint: validación, procesamiento y generación de respuestas.
 
 Al eliminar la distinción artificial entre rutas y controladores, se reduce la complejidad de la estructura, se mejora la cohesión del código y se mantiene una trazabilidad más clara entre las definiciones de rutas y su implementación.
+
+### Manejo de Errores
+
+El manejo de errores sigue estas prácticas:
+
+- Errores 400 para validaciones fallidas
+
+- Errores 404 para recursos no encontrados
+
+- Errores 500 con logging estructurado
