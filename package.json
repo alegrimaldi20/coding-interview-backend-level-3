@@ -4,19 +4,39 @@
   "description": "Coding Interview Backend Level 3",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest e2e"
+    "test": "jest e2e",
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:studio": "prisma studio",
+    "db:migrate": "prisma migrate dev"
   },
   "author": "El Dorado Dev Team",
   "license": "ISC",
   "devDependencies": {
-    "@swc/core": "^1.7.2",
-    "@swc/jest": "^0.2.36",
+    "@swc/core": "^1.11.13",
+    "@swc/jest": "^0.2.37",
+    "@types/hapi__vision": "^5.5.8",
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",
     "mocha": "^10.7.0",
+    "prisma": "^6.5.0",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.21",
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@hapi/hapi": "^21.3.10"
+    "@hapi/boom": "^10.0.1",
+    "@hapi/hapi": "^21.4.0",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/vision": "^7.0.3",
+    "@prisma/client": "^6.5.0",
+    "class-validator": "^0.14.1",
+    "hapi-swagger": "^17.3.2",
+    "joi": "^17.13.3",
+    "pg": "^8.14.1",
+    "tsx": "^4.19.3"
   }
 }
